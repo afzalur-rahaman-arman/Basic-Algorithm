@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	while(1)//used eof
+  {
+	int array[1000];
+	int in;
+	cin>>in; //enter the Amount of array
+	for(int i=0;i<in;i++)
+	cin>>array[i];//enter the value 
+	int item ;
+	cin>>item;//enter what the item which do you want
+	int high=in;
+	int low=0;
+	while (low<=high)
+	{
+			int mid=(high+low)/2;
+		if(item==array[mid])
+		{
+		cout<<"Found";break;
+		}
+	else	if(array[mid]<item)
+		{
+			low=mid+1;
+		}
+		else
+		{
+			high=mid-1;
+		}
+	}
+  }
+}
